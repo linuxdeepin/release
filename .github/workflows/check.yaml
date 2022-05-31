@@ -1,0 +1,92 @@
+name: Tag check
+on:
+  pull_request_target:
+
+env:
+  APP_ID: 215980
+  APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+
+jobs:
+  Init:
+    runs-on: ubuntu-latest
+    id: init
+    outputs:
+      matrix: ${{ steps.matrix.outputs.result }}
+    steps:
+      - name: install depends for load scripts
+        run: |
+          npm install @octokit/rest
+          npm install @octokit/auth-app
+      - name: Get token using github-script
+        id: get-token
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { Octokit } = require("@octokit/rest");
+            const { createAppAuth } = require("@octokit/auth-app");
+            const appOctokit = new Octokit({
+              authStrategy: createAppAuth,
+              auth: {
+                appId: process.env.APP_ID,
+                privateKey: process.env.APP_PRIVATE_KEY,
+              }
+            });
+            const app_installation = await appOctokit.rest.apps.getRepoInstallation({
+              owner: context.payload.organization.login,
+              repo: context.payload.repository.name
+            });
+            const { token } = await appOctokit.auth({
+              type: "installation",
+              installationId: app_installation.data.id
+            });
+            core.setOutput('app_token', token)
+      - name: Matrix files
+        uses: actions/github-script@v6
+        id: matrix
+        with:
+          script: |
+            const { Octokit } = require("@octokit/rest");
+            const { createAppAuth } = require("@octokit/auth-app");
+            const core = require('@actions/core');
+            const github = require('@actions/github');
+            const app = new Octokit({
+              authStrategy: createAppAuth,
+              auth: {
+                appId: process.env.APP_ID,
+                privateKey: process.env.APP_PRIVATE_KEY,
+              }
+            });
+            const currentCommit = await octokit.rest.git.getCommit({
+              ...context.repo,
+              commit_sha: github.context.sha
+            });
+            const parentCommit = await octokit.rest.git.getCommit({
+              ...context.repo,
+              commit_sha: currentCommit.data.parents[0].sha,
+            });
+            const changedFiles = await octokit.rest.repos.compareCommits({
+              owner,
+              repo: "dde-control-center",
+              base: parentCommit.data.sha,
+              head: currentCommit.data.sha,
+            });
+
+            const files = changedFiles.data.files.map(ele => ele.filename);
+
+            
+          result-encoding: string
+  Check:
+    runs-on: ubuntu-latest
+    needs: [ Init ]
+    strategy:
+      matrix:
+        pkg: ${{fromJson(needs.init.outputs.matrix)}}
+    steps:
+      - name: Install cli
+        run: |
+          npm install -g tag-syncer@1.1.3
+      - name: Check tag
+        env:
+          github-token: ${{ steps.get-token.outputs.app_token }}
+        run: |
+          tag-check -t ${github-token} -f ${{ matrix.pkg }}
