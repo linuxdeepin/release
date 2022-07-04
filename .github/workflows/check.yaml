@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.matrix.outputs.result }}
-      token: ${{ steps.token.outputs.token }}
     steps:
       - name: install depends for load scripts
         run: |
@@ -42,12 +41,6 @@ jobs:
               installationId: app_installation.data.id
             });
             core.setOutput('app_token', token)
-      - name: Token
-        id: token
-        env:
-          TOKEN: ${{ steps.get-token.outputs.app_token }}
-        run: |
-          echo "::set-output name=token::$(echo $TOKEN | base64)"
       - name: Matrix files
         uses: actions/github-script@v6
         id: matrix
@@ -64,7 +57,7 @@ jobs:
             });
             const parentCommit = await octokit.rest.git.getCommit({
               ...context.repo,
-              commit_sha: currentCommit.data.parents[0].sha,
+              commit_sha: currentCommit.data.parents.pop().sha,
             });
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
@@ -83,20 +76,18 @@ jobs:
           result-encoding: string
   check:
     runs-on: ubuntu-latest
+    continue-on-error: true
     needs: [ init ]
     strategy:
       matrix:
         pkg: ${{fromJson(needs.init.outputs.matrix)}}
     steps:
       - uses: actions/checkout@v3
-        if: ${{ github.event.pull_request.head.sha }}
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Install cli
         run: |
-          npm install -g tag-syncer@1.1.3
+          npm install -g tag-syncer@1.1.6
       - name: Check tag
-        env:
-          TOKEN: ${{ needs.init.outputs.token }}
         run: |
-          tag-check -f ./${{ matrix.pkg }} -t $(echo $TOKEN | base64 -d)
+          tag-check -f ./${{ matrix.pkg }}
