@@ -78,6 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     needs: [ init ]
+    if: ${{ needs.init.outputs.matrix != '[]' && needs.init.outputs.matrix != '' }}
     strategy:
       matrix:
         pkg: ${{fromJson(needs.init.outputs.matrix)}}
