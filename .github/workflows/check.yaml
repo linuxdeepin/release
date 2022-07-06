@@ -1,6 +1,8 @@
 name: Tag check
 on:
   pull_request_target:
+    paths:
+      - 'tags/*.json'
 
 env:
   APP_ID: 174141
@@ -45,26 +47,19 @@ jobs:
         uses: actions/github-script@v6
         id: matrix
         env:
-          TOKEN: ${{ steps.get-token.outputs.app_token }}
+          token: ${{ steps.get-token.outputs.app_token }}
+          base: ${{ github.event.pull_request.base.sha }}
+          head: ${{ github.event.pull_request.head.sha }}
         with:
           script: |
-            const { TOKEN } = process.env;
+            const { token, base, head } = process.env;
             const client = require('@actions/github');
-            const octokit = client.getOctokit(TOKEN);
-            const currentCommit = await octokit.rest.git.getCommit({
-              ...context.repo,
-              commit_sha: client.context.sha
-            });
-            const parentCommit = await octokit.rest.git.getCommit({
-              ...context.repo,
-              commit_sha: currentCommit.data.parents[0].sha,
-            });
+            const octokit = client.getOctokit(token);
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
-              base: parentCommit.data.sha,
-              head: currentCommit.data.sha,
+              base,
+              head,
             });
-
             const files = changedFiles.data.files.map(ele => ele.filename);
             console.log(files)
             return JSON.stringify(files.filter(item => {
@@ -88,7 +83,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Install cli
         run: |
-          npm install -g tag-syncer@1.1.6
+          npm install -g tag-syncer@1.1.7
       - name: Check tag
         run: |
           tag-check -f ./${{ matrix.pkg }}
