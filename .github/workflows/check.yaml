@@ -51,18 +51,18 @@ jobs:
             const { TOKEN } = process.env;
             const client = require('@actions/github');
             const octokit = client.getOctokit(TOKEN);
-            const currentCommit = await octokit.rest.git.getCommit({
+            const headCommit = await octokit.rest.git.getCommit({
               ...context.repo,
-              commit_sha: client.context.sha
+              commit_sha: ${{ github.head_ref }}
             });
-            const parentCommit = await octokit.rest.git.getCommit({
+            const baseCommit = await octokit.rest.git.getCommit({
               ...context.repo,
-              commit_sha: currentCommit.data.parents[0].sha,
+              commit_sha: ${{ github.base_ref }},
             });
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
-              base: parentCommit.data.sha,
-              head: currentCommit.data.sha,
+              base: baseCommit.data.sha,
+              head: headCommit.data.sha,
             });
 
             const files = changedFiles.data.files.map(ele => ele.filename);
