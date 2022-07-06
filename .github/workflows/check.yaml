@@ -57,7 +57,7 @@ jobs:
             });
             const parentCommit = await octokit.rest.git.getCommit({
               ...context.repo,
-              commit_sha: currentCommit.data.parents.pop().sha,
+              commit_sha: currentCommit.data.parents[0].sha,
             });
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
