@@ -4,7 +4,7 @@ on:
     branch: master
 
 env:
-  APP_ID: 215996
+  APP_ID: 174141
   APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
 
 jobs:
