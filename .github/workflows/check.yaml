@@ -62,7 +62,6 @@ jobs:
             });
             const files = changedFiles.data.files.map(ele => ele.filename);
             console.log(files)
-            return ""
             return JSON.stringify(files.filter(item => {
                 if (!item.startsWith('tags')) {
                     return false;
