@@ -58,15 +58,15 @@ jobs:
                 }
                 return 'json' === item.split('.')[item.split('.').length -1];
             }));
-              
-            (async () => {
-            for (const files of tags) {
-              const root = yamlLoad(files);
-              if (root === null) {
-                continue;
-              }
 
-              const { sha, tag, author, email, description } = root.version;
-              await Tag(octokit, "linuxdeepin", "go-gir", sha, tag, description, author, email);
-            }
-          })()
+            (async () => {
+              for (const files of tags) {
+                const root = yamlLoad(files);
+                if (root === null) {
+                  continue;
+                }
+
+                const { sha, tag, author, email, description } = root.version;
+                await Tag(octokit, "linuxdeepin", "go-gir", sha, tag, description, author, email);
+              }
+            })()
