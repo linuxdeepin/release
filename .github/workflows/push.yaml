@@ -11,40 +11,28 @@ jobs:
   init:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: install depends for load scripts
         run: |
+          npm install tag-syncer@1.2.0
           npm install @octokit/rest
-          npm install @octokit/auth-app
-          npm install @actions/github
-          npm install @actions/core
-          npm install tag-syncer@1.1.11
       - name: Get token using github-script
+        id: get-token
         uses: actions/github-script@v6
-        env:
-          head: ${{ github.event.after }}
-          base: ${{ github.event.before }}
         with:
           script: |
-            const { Octokit } = require("@octokit/rest");
-            const { createAppAuth } = require("@octokit/auth-app");
-            const { yamlLoad, Tag } = require("tag-syncer");
-            const appOctokit = new Octokit({
-              authStrategy: createAppAuth,
-              auth: {
-                appId: process.env.APP_ID,
-                privateKey: process.env.APP_PRIVATE_KEY,
-              }
-            });
-            const app_installation = await appOctokit.rest.apps.getRepoInstallation({
+            const { Tag, yamlLoad, GetToken } = require('tag-syncer');
+            const { APP_ID, APP_PRIVATE_KEY } = process.env;
+            const app = {
+              APP_ID,
+              APP_PRIVATE_KEY
+            };
+
+            const repo = {
               owner: context.payload.organization.login,
               repo: context.payload.repository.name
-            });
-            const { token } = await appOctokit.auth({
-              type: "installation",
-              installationId: app_installation.data.id
-            });
-            const client = require('@actions/github');
-            const octokit = client.getOctokit(token);
+            };
+            const octokit = new Octokit({ auth: await GetToken(app, repo) });
             const { base, head } = process.env;
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
@@ -59,13 +47,11 @@ jobs:
                 }
                 return 'json' === item.split('.')[item.split('.').length -1];
             })
-            const owner = context.payload.organization.login;
-            const repo = context.payload.repository.name;
             for (const file of tags) {
               const root = yamlLoad(file);
               if (root === null) {
                 continue;
               }
-              const { sha, tag, author, email, description } = root.version;
-              await Tag(octokit, owner, repo, sha, tag, description, author, email);
+              const { sha, tag, author, email, description } = yamlLoad(file).version;
+              await Tag(octokit, repo.owner, repo.repo, sha, tag, description, author, email);
             }
