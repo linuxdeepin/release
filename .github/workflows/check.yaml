@@ -16,33 +16,24 @@ jobs:
     steps:
       - name: install depends for load scripts
         run: |
+          npm install tag-syncer@1.2.0
           npm install @octokit/rest
-          npm install @octokit/auth-app
-          npm install @actions/github
-          npm install @actions/core
       - name: Get token using github-script
         id: get-token
         uses: actions/github-script@v6
         with:
           script: |
-            const { Octokit } = require("@octokit/rest");
-            const { createAppAuth } = require("@octokit/auth-app");
-            const appOctokit = new Octokit({
-              authStrategy: createAppAuth,
-              auth: {
-                appId: process.env.APP_ID,
-                privateKey: process.env.APP_PRIVATE_KEY,
-              }
-            });
-            const app_installation = await appOctokit.rest.apps.getRepoInstallation({
+            const { APP_ID, APP_PRIVATE_KEY } = process.env;
+            const app = {
+              APP_ID,
+              APP_PRIVATE_KEY
+            };
+
+            const repo = {
               owner: context.payload.organization.login,
               repo: context.payload.repository.name
-            });
-            const { token } = await appOctokit.auth({
-              type: "installation",
-              installationId: app_installation.data.id
-            });
-            core.setOutput('app_token', token)
+            };
+            core.setOutput('app_token', await GetToken(app, repo))
       - name: Matrix files
         uses: actions/github-script@v6
         id: matrix
@@ -53,8 +44,8 @@ jobs:
         with:
           script: |
             const { token, base, head } = process.env;
-            const client = require('@actions/github');
-            const octokit = client.getOctokit(token);
+            const { Octokit } = require("@octokit/rest");
+            const octokit = new Octokit()
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
               base,
@@ -81,9 +72,17 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: Install cli
-        run: |
-          npm install -g tag-syncer@1.1.11
       - name: Check tag
-        run: |
-          tag-check -f ./${{ matrix.pkg }}
+        uses: actions/github-script@v6
+        env:
+          file: ${{ matrix.pkg }}
+        with:
+          script: |
+            const { Check, yamlLoad } = require("tag-syncer");
+            const { file } = process.env;
+            const { Octokit } = require("@octokit/rest");
+            const octokit = new Octokit()
+            const owner = context.payload.organization.login;
+            const repo = context.payload.repository.name;
+            const { sha, tag } = yamlLoad(file);
+            await Check(octokit, owner, repo, sha, tag)
