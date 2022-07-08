@@ -17,13 +17,17 @@ jobs:
           npm install @octokit/auth-app
           npm install @actions/github
           npm install @actions/core
+          npm install tag-syncer@1.1.10
       - name: Get token using github-script
-        id: get-token
         uses: actions/github-script@v6
+        env:
+          head: ${{ github.event.after }}
+          base: ${{ github.event.before }}
         with:
           script: |
             const { Octokit } = require("@octokit/rest");
             const { createAppAuth } = require("@octokit/auth-app");
+            const { yamlLoad, Tag } = require("tag-syncer");
             const appOctokit = new Octokit({
               authStrategy: createAppAuth,
               auth: {
@@ -39,46 +43,29 @@ jobs:
               type: "installation",
               installationId: app_installation.data.id
             });
-            core.setOutput('app_token', token)
-      - name: Matrix files
-        uses: actions/github-script@v6
-        id: matrix
-        env:
-          TOKEN: ${{ steps.get-token.outputs.app_token }}
-        with:
-          script: |
-            const { TOKEN } = process.env;
             const client = require('@actions/github');
-            const octokit = client.getOctokit(TOKEN);
-            const currentCommit = await octokit.rest.git.getCommit({
-              ...context.repo,
-              commit_sha: client.context.sha
-            });
-            const parentCommit = await octokit.rest.git.getCommit({
-              ...context.repo,
-              commit_sha: currentCommit.data.parents.pop().sha,
-            });
+            const octokit = client.getOctokit(token);
+            const { base, head } = process.env;
             const changedFiles = await octokit.rest.repos.compareCommits({
               ...context.repo,
-              base: parentCommit.data.sha,
-              head: currentCommit.data.sha,
+              base,
+              head
             });
-
             const files = changedFiles.data.files.map(ele => ele.filename);
             console.log(files)
-            return JSON.stringify(files.filter(item => {
+            const tags = files.filter(item => {
                 if (!item.startsWith('tags')) {
                     return false;
                 }
                 return 'json' === item.split('.')[item.split('.').length -1];
-            }))
-          result-encoding: string
-      - uses: actions/checkout@v3
-      - name: Install cli
-        run: |
-          npm install -g tag-syncer@1.1.7
-      - name: Sync tag
-        env:
-          TOKEN: ${{ steps.get-token.outputs.app_token }}
-        run: |
-          tag-sync -f ./${{ matrix.pkg }} -t ${TOKEN}
+            })
+            const owner = context.payload.organization.login;
+            const repo = context.payload.repository.name;
+            for (const file of tags) {
+              const root = yamlLoad(file);
+              if (root === null) {
+                continue;
+              }
+              const { sha, tag, author, email, description } = root.version;
+              await Tag(octokit, owner, repo, sha, tag, description, author, email);
+            }

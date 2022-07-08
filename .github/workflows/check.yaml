@@ -83,7 +83,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Install cli
         run: |
-          npm install -g tag-syncer@1.1.7
+          npm install -g tag-syncer@1.1.10
       - name: Check tag
         run: |
           tag-check -f ./${{ matrix.pkg }}
