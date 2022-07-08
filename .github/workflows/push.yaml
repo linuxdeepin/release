@@ -11,6 +11,7 @@ jobs:
   init:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: install depends for load scripts
         run: |
           npm install @octokit/rest
