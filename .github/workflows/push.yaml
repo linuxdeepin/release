@@ -19,23 +19,22 @@ jobs:
       - name: Get token using github-script
         id: get-token
         uses: actions/github-script@v6
+        env:
+          base: ${{ github.event.before }}
+          head: ${{ github.event.after }}
         with:
           script: |
             const { Tag, yamlLoad, GetToken } = require('tag-syncer');
             const { Octokit } = require("@octokit/rest");
-            const { APP_ID, APP_PRIVATE_KEY } = process.env;
+            const { APP_ID, APP_PRIVATE_KEY, base, head } = process.env;
+            const path = require('path')
             const app = {
               APP_ID,
               APP_PRIVATE_KEY
             };
 
-            const repo = {
-              owner: context.payload.organization.login,
-              repo: context.payload.repository.name
-            };
-            const octokit = new Octokit({ auth: await GetToken(app, repo) });
-            const { base, head } = process.env;
-            const changedFiles = await octokit.rest.repos.compareCommits({
+            const appOctokit = new Octokit();
+            const changedFiles = await appOctokit.rest.repos.compareCommits({
               ...context.repo,
               base,
               head
@@ -53,6 +52,13 @@ jobs:
               if (root === null) {
                 continue;
               }
+              const repo = {
+                owner: context.payload.organization.login,
+                repo: path.basename(path.resolve(file), '.json')
+              };
+              const octokit = new Octokit({
+                auth: await GetToken(app, repo)
+              });
               const { sha, tag, author, email, description } = yamlLoad(file).version;
               await Tag(octokit, repo.owner, repo.repo, sha, tag, description, author, email);
             }
