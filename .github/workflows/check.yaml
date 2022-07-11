@@ -16,35 +16,16 @@ jobs:
     steps:
       - name: install depends for load scripts
         run: |
-          npm install tag-syncer@1.2.0
           npm install @octokit/rest
-      - name: Get token using github-script
-        id: get-token
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const { GetToken } = require('tag-syncer');
-            const { APP_ID, APP_PRIVATE_KEY } = process.env;
-            const app = {
-              APP_ID,
-              APP_PRIVATE_KEY
-            };
-
-            const repo = {
-              owner: context.payload.organization.login,
-              repo: context.payload.repository.name
-            };
-            core.setOutput('app_token', await GetToken(app, repo))
       - name: Matrix files
         uses: actions/github-script@v6
         id: matrix
         env:
-          token: ${{ steps.get-token.outputs.app_token }}
           base: ${{ github.event.pull_request.base.sha }}
           head: ${{ github.event.pull_request.head.sha }}
         with:
           script: |
-            const { token, base, head } = process.env;
+            const { base, head } = process.env;
             const { Octokit } = require("@octokit/rest");
             const octokit = new Octokit()
             const changedFiles = await octokit.rest.repos.compareCommits({
