@@ -4,6 +4,6 @@
         "tag": "5.0.59.1",
         "description": "Revert fix: popup窗口失去焦点不能自消失",
         "author": "chenke",
-        "email": "<chenke@uniontech.com>"
+        "email": "chenke@uniontech.com"
     }
 }

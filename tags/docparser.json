@@ -4,6 +4,6 @@
         "tag": "1.0.3",
         "description": "fix: 全文搜索导致文管卡死/崩溃",
         "author": "lvwujun",
-        "email": "<lvwujun@uniontech.com>"
+        "email": "lvwujun@uniontech.com"
     }
 }
