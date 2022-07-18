@@ -1,9 +1,13 @@
 {
-    "version": {
-        "sha": "225c49e97a62fb7203fb1adf643cbd691a525ca8",
-        "tag": "5.9.14",
-        "description": "fix: bug 117175",
-        "author": "liuzheng",
-        "email": "liuzheng@uniontech.com"
+    "apiVersion": "1.0",
+    "repo": "deepin-movie-reborn",
+    "data": {
+        "tagger": {
+            "name": "liuzheng",
+            "email": "liuzheng@uniontech.com"
+        },
+        "message": "fix: bug 117175",
+        "object": "225c49e97a62fb7203fb1adf643cbd691a525ca8",
+        "tag": "5.9.14"
     }
 }

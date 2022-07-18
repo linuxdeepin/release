@@ -55,7 +55,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - run: |
-          npm install tag-syncer@1.2.0
+          npm install @justforlxz/tools
           npm install @octokit/rest
       - name: Check tag
         uses: actions/github-script@v6
@@ -63,13 +63,10 @@ jobs:
           file: ${{ matrix.pkg }}
         with:
           script: |
-            const { Check, yamlLoad } = require("tag-syncer");
+            const { Check, yamlLoad } = require("@justforlxz/tools");
             const path = require('path');
             const { Octokit } = require("@octokit/rest");
             const { file } = process.env;
             const octokit = new Octokit()
             const owner = context.payload.organization.login;
-            const file_basename = path.basename(file);
-            const repo = path.basename(file_basename, path.extname(file_basename));
-            const { sha, tag } = yamlLoad(file).version;
-            await Check(octokit, owner, repo, sha, tag)
+            await Check(octokit, yamlLoad(file))

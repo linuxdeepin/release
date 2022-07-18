@@ -52,7 +52,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          npm install tag-syncer@1.2.0
+          npm install @justforlxz/tools
           npm install @octokit/rest
       - name: Create tag
         uses: actions/github-script@v6
@@ -60,7 +60,7 @@ jobs:
           file: ${{ matrix.pkg }}
         with:
           script: |
-            const { Tag, GetToken, yamlLoad } = require("tag-syncer");
+            const { Tag, GetToken, yamlLoad } = require("@justforlxz/tools");
             const path = require('path');
             const { Octokit } = require("@octokit/rest");
             const { file, APP_ID, APP_PRIVATE_KEY } = process.env;
@@ -79,5 +79,4 @@ jobs:
               auth: await GetToken(app, repo)
             });
 
-            const { sha, tag, author, email, description } = yamlLoad(file).version;
-            await Tag(octokit, repo.owner, repo.repo, sha, tag, description, author, email);
+            await Tag(octokit, yamlLoad(file));
