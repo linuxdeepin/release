@@ -1,0 +1,67 @@
+name: Issue Comment
+on:
+  issue_comment:
+    types:
+      - created
+
+env:
+  APP_ID: 174141
+  APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
+        run: |
+          npm install @justforlxz/tools
+          npm install @octokit/rest
+      - name: Handle Action
+        uses: actions/github-script@v4
+        env:
+          body: ${{ github.event.comment.body }}
+        with:
+          script: |
+            const { body, APP_ID, APP_PRIVATE_KEY } = process.env;
+            const { Octokit } = require("@octokit/rest");
+            const { GetToken, Upload } = require('@justforlxz/tools')
+            const ba = new Buffer(body, 'base64')
+            console.log(ba.toString())
+            const config = JSON.parse(ba.toString())
+            if (config.data.object.length === 0) {
+              console.error(`sha is empty.`)
+              exit(1)
+            }
+            if (config.data.tag.length === 0) {
+              console.error(`tag is empty.`)
+              exit(1)
+            }
+            if (config.data.tagger.email.length === 0) {
+              console.error(`email is empty.`)
+              exit(1)
+            }
+            if (config.data.tagger.name.length === 0) {
+              console.error(`author is empty.`)
+              exit(1)
+            }
+            if (config.data.message.length === 0) {
+              console.error(`description is empty.`)
+              exit(1)
+            }
+
+            const repo = {
+              owner: context.payload.organization.login,
+              repo: 'release'
+            }
+
+            const app = {
+              APP_ID,
+              APP_PRIVATE_KEY
+            };
+
+            const octokit = new Octokit({
+              auth: await GetToken(app, repo)
+            });
+
+            const up = new Upload(octokit);
+            up.uploadFile(config, repo)
