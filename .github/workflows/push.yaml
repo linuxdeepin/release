@@ -1,7 +1,8 @@
 name: Tag sync
 on:
   push:
-    branch: master
+    branches:
+      - master
 
 env:
   APP_ID: 174141
