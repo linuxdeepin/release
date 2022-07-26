@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "deepin-album",
+    "data": {
+        "tagger": {
+            "name": " C",
+            "email": "zhangdingyuan@uniontech.com"
+        },
+        "message": "release 5.10.1",
+        "object": "c0a822335ddf422561be47d7d182ab5a1ef79008",
+        "tag": "5.10.1"
+    }
+}
