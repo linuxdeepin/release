@@ -3,11 +3,11 @@
     "repo": "dde-clipboard",
     "data": {
         "tagger": {
-            "name": "lvpeilong",
-            "email": "lvpeilong@uniontech.com"
+            "name": " C",
+            "email": "zhangdingyuan@uniontech.com"
         },
-        "message": "release 5.4.7",
-        "object": "28f8f5565c9a44f3500da50617dac8def0dc2d78",
-        "tag": "5.4.7"
+        "message": "release 5.15.0102.7",
+        "object": "939583b4e38bd14244f41a98f351ac5ac9e94daa",
+        "tag": "5.15.0102.7"
     }
 }
