@@ -3,11 +3,11 @@
     "repo": "deepin-image-viewer",
     "data": {
         "tagger": {
-            "name": "¯Ë",
-            "email": "houchengqiu@uniontech.com"
+            "name": " C",
+            "email": "zhangdingyuan@uniontech.com"
         },
-        "message": ">:HV20.7Æ",
-        "object": "e75e8c3b5cdce008c00e3ef5a8028a040bd37357",
-        "tag": "5.9.3"
+        "message": "release 5.8.15",
+        "object": "baf5ab82d00fd0f3f8c5d0b1bd433fcb4d8e6369",
+        "tag": "5.8.15"
     }
 }
