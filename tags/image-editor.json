@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "image-editor",
+    "data": {
+        "tagger": {
+            "name": " C",
+            "email": "zhangdingyuan@uniontech.com"
+        },
+        "message": "release 1.0.14",
+        "object": "c8fcdaae813bf9b014bc0f0046a0c577ba00deb6",
+        "tag": "1.0.14"
+    }
+}
