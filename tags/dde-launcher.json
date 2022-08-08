@@ -3,11 +3,11 @@
     "repo": "dde-launcher",
     "data": {
         "tagger": {
-            "name": "Fan PengCheng",
-            "email": "fanpengcheng@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "feat: 丢失焦点后隐藏器隐藏主界面",
-        "object": "6671621384378010eac21ff28cb9f2d8b9992ae7",
-        "tag": "5.5.19.1"
+        "message": "1050update3提测",
+        "object": "1b8445c60fe3ff4627fe5eb6d0305c279d97b752",
+        "tag": "5.5.27"
     }
 }
