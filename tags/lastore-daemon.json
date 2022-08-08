@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "lastore-daemon",
+    "data": {
+        "tagger": {
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
+        },
+        "message": "1050update3提测",
+        "object": "e2038ba89a2d9726074c3cd3729df77722df8ae8",
+        "tag": "5.3.33"
+    }
+}
