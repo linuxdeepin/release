@@ -3,11 +3,11 @@
     "repo": "dde-control-center",
     "data": {
         "tagger": {
-            "name": "wubowen",
-            "email": "wubowen@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "1052提测-20220510",
-        "object": "3d15a45e98d880e721e93bad18774e194fe3111f",
-        "tag": "5.5.77"
+        "message": "1050update3提测",
+        "object": "57d31ca61a92394901c920c1bee2e8c67d6f9a6f",
+        "tag": "5.5.99"
     }
 }
