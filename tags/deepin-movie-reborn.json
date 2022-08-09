@@ -3,11 +3,11 @@
     "repo": "deepin-movie-reborn",
     "data": {
         "tagger": {
-            "name": "liuzheng",
-            "email": "liuzheng@uniontech.com"
+            "name": "赵泽东",
+            "email": "zhaozedong@uniontech.com"
         },
-        "message": "fix: bug 117175",
-        "object": "225c49e97a62fb7203fb1adf643cbd691a525ca8",
-        "tag": "5.9.14"
+        "message": "1050U3第一轮集成",
+        "object": "19de2721ba53cacc82bccccf9626e0de901eb4f5",
+        "tag": "5.10.7"
     }
 }
