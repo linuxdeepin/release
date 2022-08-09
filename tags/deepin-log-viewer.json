@@ -3,11 +3,11 @@
     "repo": "deepin-log-viewer",
     "data": {
         "tagger": {
-            "name": "4��	",
+            "name": "吴勇（成都）",
             "email": "wuyonga@uniontech.com"
         },
-        "message": "1050u3�HW 1050u2 CPMU	",
-        "object": "022f63ff38741c349559001039f8cf32e1dc03f0",
-        "tag": "5.9.8"
+        "message": "1050u3第一次集成",
+        "object": "c903e57de9fa9d77be5a25447175897cc9fff9e0",
+        "tag": "5.9.9"
     }
 }
