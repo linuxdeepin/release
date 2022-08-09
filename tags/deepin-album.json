@@ -3,11 +3,11 @@
     "repo": "deepin-album",
     "data": {
         "tagger": {
-            "name": " C",
-            "email": "zhangdingyuan@uniontech.com"
+            "name": "吴勇（成都）",
+            "email": "wuyonga@uniontech.com"
         },
-        "message": "release 5.10.1",
-        "object": "c0a822335ddf422561be47d7d182ab5a1ef79008",
-        "tag": "5.10.1"
+        "message": "1050u3第一次集成",
+        "object": "6b435e1876c26f19d1eda418416b0d302361897e",
+        "tag": "5.10.5"
     }
 }
