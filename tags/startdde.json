@@ -3,11 +3,11 @@
     "repo": "startdde",
     "data": {
         "tagger": {
-            "name": "lichangze",
+            "name": "李昌泽",
             "email": "lichangze@uniontech.com"
         },
-        "message": "release 1051",
-        "object": "a6d266353db067503b2bf1e33db96f7f0dde2e67",
-        "tag": "5.9.32"
+        "message": "1050update3 0810集成",
+        "object": "7bc2f8adf9393e1b795b22fc1be35236a8289ff5",
+        "tag": "5.9.46"
     }
 }
