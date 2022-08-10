@@ -3,11 +3,11 @@
     "repo": "deepin-devicemanager",
     "data": {
         "tagger": {
-            "name": "N�",
+            "name": "李菲",
             "email": "lifei@uniontech.com"
         },
-        "message": "'%�1050U2",
-        "object": "2fd19721d61ca926342b9fcb0db1dd8eeb2cd8b9",
-        "tag": "5.8.14"
+        "message": "1050U3集成",
+        "object": "af0c71ccf3df00f05d756259db40f5f4e78ec10d",
+        "tag": "5.8.15"
     }
 }
