@@ -3,11 +3,11 @@
     "repo": "dde-api",
     "data": {
         "tagger": {
-            "name": "wubowen",
-            "email": "wubowen@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "1050 update1",
-        "object": "48b26758cf477c49f60e29f43a3ccde79adccf1d",
-        "tag": "5.5.25"
+        "message": "社区版集成",
+        "object": "c6e90e7c614dfbe0ab35403be812f4e78c4f433a",
+        "tag": "5.5.29"
     }
 }
