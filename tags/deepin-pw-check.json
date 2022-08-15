@@ -3,11 +3,11 @@
     "repo": "deepin-pw-check",
     "data": {
         "tagger": {
-            "name": "lvpeilong",
-            "email": "lvpeilong@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "Release 5.1.8",
-        "object": "f1f94a9969906b67ea0999bfee7b7e46213262c1",
-        "tag": "5.1.8"
+        "message": "社区版提测",
+        "object": "5ab259fca2756c176ea868f1104faac40b1238f4",
+        "tag": "5.1.16"
     }
 }
