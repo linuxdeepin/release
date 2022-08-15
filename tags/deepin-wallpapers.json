@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "deepin-wallpapers",
+    "data": {
+        "tagger": {
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
+        },
+        "message": "社区版集成",
+        "object": "dadaeebbce3a1549e2bb9dcc87bf257c4c84dd7f",
+        "tag": "1.8.3"
+    }
+}
