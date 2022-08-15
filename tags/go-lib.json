@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "go-lib",
+    "data": {
+        "tagger": {
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
+        },
+        "message": "社区版集成",
+        "object": "26f9037ddfc5f92760e14546f2553677f71e432a",
+        "tag": "5.8.24"
+    }
+}
