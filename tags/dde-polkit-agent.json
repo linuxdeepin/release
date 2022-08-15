@@ -3,11 +3,11 @@
     "repo": "dde-polkit-agent",
     "data": {
         "tagger": {
-            "name": "lvpeilong",
-            "email": "lvpeilong@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "release 5.5.7",
-        "object": "0def9c0ea900b802c911381d12a898fa8b30f36d",
-        "tag": "5.5.7"
+        "message": "社区版集成",
+        "object": "cb3a61f8b0863ae9a6f117fb039116e9416c0b1b",
+        "tag": "5.5.21"
     }
 }
