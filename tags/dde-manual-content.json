@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "dde-manual-content",
+    "data": {
+        "tagger": {
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
+        },
+        "message": "0819提测",
+        "object": "eab2f977244dbe538cda19ec0a1caf7eec2b3ba4",
+        "tag": "1.1.6"
+    }
+}
