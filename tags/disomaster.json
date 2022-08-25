@@ -3,11 +3,11 @@
     "repo": "disomaster",
     "data": {
         "tagger": {
-            "name": "zhengyouge",
-            "email": "zhengyouge@uniontech.com"
+            "name": "陈李祥",
+            "email": "chenlixiang@uniontech.com"
         },
-        "message": "提交disomaster1031兼容版本",
-        "object": "886056c38286c223ee39027afff7ef7224f6c169",
-        "tag": "5.0.7"
+        "message": "提交1050u3集成",
+        "object": "5d1836bb094a2179bd2774a38fe1b24db62e3103",
+        "tag": "5.0.8"
     }
 }
