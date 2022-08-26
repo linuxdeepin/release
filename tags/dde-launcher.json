@@ -3,11 +3,11 @@
     "repo": "dde-launcher",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "0819提测",
-        "object": "740b7ddb44c79c3827e12939d11c304cfb9a33d6",
-        "tag": "5.5.31"
+        "message": "1053提测",
+        "object": "0c6e85ca8903bcc6b5e8f4210ecd7fe53ea6a4d4",
+        "tag": "5.5.32"
     }
 }
