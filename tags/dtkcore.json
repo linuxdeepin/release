@@ -3,11 +3,11 @@
     "repo": "dtkcore",
     "data": {
         "tagger": {
-            "name": "Ye ShanShan",
-            "email": "yeshanshan@uniontech.com"
+            "name": "陈可",
+            "email": "chenke@uniontech.com"
         },
-        "message": "fix: DSetting unit error and crash randomly",
-        "object": "5b9329246e00df698d0dab4aea1e2ab4efe29eaa",
-        "tag": "5.5.30"
+        "message": "realse tag on master",
+        "object": "ed31144e74af4cd6c57dedafc7f621d00ca81ddc",
+        "tag": "5.6.0.1"
     }
 }
