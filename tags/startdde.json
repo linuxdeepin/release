@@ -3,11 +3,11 @@
     "repo": "startdde",
     "data": {
         "tagger": {
-            "name": "殷杰",
-            "email": "yinjie@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "1053提测",
-        "object": "632a88e8f28a0f08a745ea16631a16c59a46aa89",
-        "tag": "5.9.48"
+        "message": "0830提测",
+        "object": "ab9ae7f166d1454d899c68f18fc709f269a7406a",
+        "tag": "5.9.51"
     }
 }
