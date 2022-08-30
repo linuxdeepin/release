@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "dde-kwin",
+    "data": {
+        "tagger": {
+            "name": "张丁元",
+            "email": "zhangdingyuan@uniontech.com"
+        },
+        "message": "port upstream",
+        "object": "a329eeaf48d46620cc645fd9693532c6a3dd5057",
+        "tag": "5.5.11-deepin"
+    }
+}
