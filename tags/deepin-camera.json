@@ -6,8 +6,8 @@
             "name": "赵泽东",
             "email": "zhaozedong@uniontech.com"
         },
-        "message": "1050U3第三轮集成",
-        "object": "1e978ec20d40b4e054e3c443b0a795a52ea5dd91",
-        "tag": "1.4.3"
+        "message": "1050U3bug修复集成",
+        "object": "5cf60a3be26c186716ae411ea207aed90fae85e5",
+        "tag": "1.4.4"
     }
 }
