@@ -6,8 +6,8 @@
             "name": "吴勇（成都）",
             "email": "wuyonga@uniontech.com"
         },
-        "message": "1050u2紧急集成更新（安全漏洞修复）",
-        "object": "aa63e9b07246231c84cd4c4791d6ef7972723336",
-        "tag": "5.9.10"
+        "message": "1050u3第二次集成",
+        "object": "613ff058cedb55e78d609d44164e4ccfc5ce762b",
+        "tag": "5.9.11"
     }
 }
