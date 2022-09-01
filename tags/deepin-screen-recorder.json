@@ -3,11 +3,11 @@
     "repo": "deepin-screen-recorder",
     "data": {
         "tagger": {
-            "name": "zhaozedong",
+            "name": "赵泽东",
             "email": "zhaozedong@uniontech.com"
         },
-        "message": "1050U3第二轮集成",
-        "object": "9726a767edd9a52107919c9603fd5a3f56a5486e",
-        "tag": "5.11.6"
+        "message": "1050U3bug修复集成",
+        "object": "81c2c139a3994809c458654e31518dee44d548ae",
+        "tag": "5.11.7"
     }
 }
