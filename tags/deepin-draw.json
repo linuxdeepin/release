@@ -3,11 +3,11 @@
     "repo": "deepin-draw",
     "data": {
         "tagger": {
-            "name": "张丁元",
-            "email": "zhangdingyuan@uniontech.com"
+            "name": "吴勇（成都）",
+            "email": "wuyonga@uniontech.com"
         },
-        "message": "release 5.10.10",
-        "object": "d8e7ff3500d3c163a1c3f7819110a36507cb6599",
-        "tag": "5.10.10"
+        "message": "1050u3第二次集成",
+        "object": "52446ac3b823cbcccbf10005b0aebdfb4e084a73",
+        "tag": "5.11.5"
     }
 }
