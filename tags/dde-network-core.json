@@ -3,11 +3,11 @@
     "repo": "dde-network-core",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "0902提测",
-        "object": "389b7e358a444044cf132516f5878e24882bc374",
-        "tag": "1.0.63"
+        "message": "1050U3提测",
+        "object": "62ce044de552b4eebbdba454344ce80704c7c8f8",
+        "tag": "1.0.64"
     }
 }
