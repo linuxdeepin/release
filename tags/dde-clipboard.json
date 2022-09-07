@@ -3,11 +3,11 @@
     "repo": "dde-clipboard",
     "data": {
         "tagger": {
-            "name": " C",
-            "email": "zhangdingyuan@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "release 5.15.0102.7",
-        "object": "939583b4e38bd14244f41a98f351ac5ac9e94daa",
-        "tag": "5.15.0102.7"
+        "message": "1050U3提测",
+        "object": "d54b654b51a32926b285af9d87bde40b1da65b3a",
+        "tag": "5.4.20"
     }
 }
