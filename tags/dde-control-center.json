@@ -3,11 +3,11 @@
     "repo": "dde-control-center",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "0902提测",
-        "object": "d1fdaae02c69acc3806aa522c06acbdf16b253f7",
-        "tag": "5.5.146"
+        "message": "1050U3提测",
+        "object": "4a2a739fb846372e0ba55a8d6d4b56e58d28eed7",
+        "tag": "5.5.147"
     }
 }
