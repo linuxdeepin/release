@@ -3,11 +3,11 @@
     "repo": "dde-session-shell",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "0902提测",
-        "object": "b273cb7010307ad1e1ad66bc5a8e940a90af519b",
-        "tag": "5.5.71"
+        "message": "1050U3提测",
+        "object": "aae606835757a9de9ddd3ae43e4e6882ffcb7216",
+        "tag": "5.5.72"
     }
 }
