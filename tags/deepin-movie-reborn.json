@@ -6,8 +6,8 @@
             "name": "赵泽东",
             "email": "zhaozedong@uniontech.com"
         },
-        "message": "1050U3第四轮集成，华为bug单修复",
-        "object": "ae038b84e071920ff3f81a7666a823a31baa5549",
-        "tag": "5.10.9"
+        "message": "1050U3bug修复集成",
+        "object": "28debc9e36554d031da64d58cd738b512ca4ef28",
+        "tag": "5.10.10"
     }
 }
