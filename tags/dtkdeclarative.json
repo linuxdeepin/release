@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "dtkdeclarative",
+    "data": {
+        "tagger": {
+            "name": "陈可",
+            "email": "chenke@uniontech.com"
+        },
+        "message": "for community release",
+        "object": "1602d547aa1628a88312d08e38f01a9b47cd1e47",
+        "tag": "5.6.0"
+    }
+}
