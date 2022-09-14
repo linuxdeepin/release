@@ -3,11 +3,11 @@
     "repo": "dde-daemon",
     "data": {
         "tagger": {
-            "name": "殷杰",
-            "email": "yinjie@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "1050U3提测",
-        "object": "85a995800f4660407309ed599582d62434c07c9e",
-        "tag": "5.14.104"
+        "message": "0914提测",
+        "object": "f3bc2cb16d2663c76cba96d532c7619ec72c61e5",
+        "tag": "5.14.105"
     }
 }
