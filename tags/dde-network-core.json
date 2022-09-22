@@ -3,11 +3,11 @@
     "repo": "dde-network-core",
     "data": {
         "tagger": {
-            "name": "吕培龙",
-            "email": "lvpeilong@uniontech.com"
+            "name": "殷杰",
+            "email": "yinjie@uniontech.com"
         },
-        "message": "0914提测",
-        "object": "9f24a1f840fbab4e9a0aed61a6c824b5e44abbb0",
-        "tag": "1.0.66"
+        "message": "修复网络插件异常导致锁屏退出的问题",
+        "object": "9200c859b6a0abd13b4130e9d8080d3a0b375e32",
+        "tag": "1.0.67"
     }
 }
