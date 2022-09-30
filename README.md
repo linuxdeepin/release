@@ -7,14 +7,6 @@
 - [ ] tag 创建
 - [ ] 版本发布
 
-## 执行流程
-
-在明道云创建 tag 同步流程，并选择需要同步的项目、对应的 commit hash 和 tag，在发起流程后，由机器人创建一份 pull request 提交。
-
-在 pull request 提交中，需要通过 commit 和 hash 的合规 check，当 check 通过后，由机器人同意审批，并通过当前流程，等待全部流程结束。
-
-在全部流程审批通过后，pull request 会被合并，并且会执行 action 将 tag 全部同步。
-
 ## repository
 
 该目录存放着 linuxdeepin 所有开源项目的发布版本，所有在 github 上发布的 tag 均使用该目录进行自动更新。
