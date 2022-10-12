@@ -6,8 +6,8 @@
             "name": "赵泽东",
             "email": "zhaozedong@uniontech.com"
         },
-        "message": "上架社区商店",
-        "object": "bdd94cc38b79f49abcfe0cbc36e017a708079bbc",
-        "tag": "5.10.11"
+        "message": "社区商店上架bug修复",
+        "object": "b76cda47c0f7bf6d9b6e4a6b792323f2e5aef994",
+        "tag": "5.10.12"
     }
 }
