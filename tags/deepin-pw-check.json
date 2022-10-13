@@ -3,11 +3,11 @@
     "repo": "deepin-pw-check",
     "data": {
         "tagger": {
-            "name": "殷杰",
-            "email": "yinjie@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "社区版提测",
-        "object": "5ab259fca2756c176ea868f1104faac40b1238f4",
-        "tag": "5.1.16"
+        "message": "1013社区提测",
+        "object": "8a8924b47005c22ff153ca9dc8db8ab4de554e0d",
+        "tag": "5.1.17"
     }
 }
