@@ -3,11 +3,11 @@
     "repo": "deepin-system-monitor",
     "data": {
         "tagger": {
-            "name": "赵泽东",
-            "email": "zhaozedong@uniontech.com"
+            "name": "李菲",
+            "email": "lifei@uniontech.com"
         },
-        "message": "1050U3集成",
-        "object": "6cb3b74e44b1e69f0e6144a1dd4c96cf844a87e0",
-        "tag": "5.9.29"
+        "message": "V20社区商店上架",
+        "object": "d8452a36f1ef51687d8129df27e40c36de19b64d",
+        "tag": "5.9.30"
     }
 }
