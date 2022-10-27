@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "deepin-calculator",
+    "data": {
+        "tagger": {
+            "name": "李菲",
+            "email": "lifei@uniontech.com"
+        },
+        "message": "V20社区商店上架",
+        "object": "e1d1d55db3045a552812c7a549960f16be53854b",
+        "tag": "5.7.22"
+    }
+}
