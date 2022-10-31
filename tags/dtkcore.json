@@ -6,8 +6,8 @@
             "name": "陈可",
             "email": "chenke@uniontech.com"
         },
-        "message": "realse tag on master",
-        "object": "ed31144e74af4cd6c57dedafc7f621d00ca81ddc",
-        "tag": "5.6.0.1"
+        "message": "for ci build dependcy",
+        "object": "dbe1403e1930ca2f9f3d7c56783ae5def05076ba",
+        "tag": "5.6.2.1"
     }
 }
