@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "deepin-lianliankan",
+    "data": {
+        "tagger": {
+            "name": "李菲",
+            "email": "lifei@uniontech.com"
+        },
+        "message": "V20社区版上架",
+        "object": "6782031f42ed284e23ff2c1721530f1a38ea6c8d",
+        "tag": "1.0.11"
+    }
+}
