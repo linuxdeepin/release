@@ -3,11 +3,11 @@
     "repo": "dde-file-manager",
     "data": {
         "tagger": {
-            "name": "zhengyouge",
-            "email": "zhengyouge@uniontech.com"
+            "name": "陈李祥",
+            "email": "chenlixiang@uniontech.com"
         },
-        "message": "提交桌面图标间距修改紧急修复版本",
-        "object": "37e198eb92e61ba6d91fc94bfa021a0bd5e4a13c",
-        "tag": "5.6.4"
+        "message": "社区版20.8集成5.8.1",
+        "object": "e4b6852c21d434085af65697c5fac1ee1281b140",
+        "tag": "5.8.1"
     }
 }
