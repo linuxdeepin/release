@@ -3,11 +3,11 @@
     "repo": "deepin-anything",
     "data": {
         "tagger": {
-            "name": "lvwujun",
-            "email": "lvwujun@uniontech.com"
+            "name": "陈李祥",
+            "email": "chenlixiang@uniontech.com"
         },
-        "message": "UOS branch, 拼音搜索，2022/3/17",
-        "object": "0218923b88e8b9b727eebb27f132146fb260aa6e",
-        "tag": "5.0.18"
+        "message": "社区版20.8集成6.0.3版本",
+        "object": "06295b9ab096066c9ed4755d3005c02a5dba4589",
+        "tag": "6.0.3"
     }
 }
