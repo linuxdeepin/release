@@ -3,11 +3,11 @@
     "repo": "deepin-screensaver",
     "data": {
         "tagger": {
-            "name": "zhengyouge",
-            "email": "zhengyouge@uniontech.com"
+            "name": "陈李祥",
+            "email": "chenlixiang@uniontech.com"
         },
-        "message": "提交屏保应用1050集成",
-        "object": "e182e4751c15335c1921d1d0725cace15bc82816",
-        "tag": "5.0.10"
+        "message": "社区版20.8集成5.0.13",
+        "object": "2078c229e7ea77d6b5548c5b14746fc121be6083",
+        "tag": "5.0.13"
     }
 }
