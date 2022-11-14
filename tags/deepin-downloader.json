@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "deepin-downloader",
+    "data": {
+        "tagger": {
+            "name": "蔡梦辞",
+            "email": "caimengci@uniontech.com"
+        },
+        "message": "中铁信科定制项目",
+        "object": "1c9d7a9dcf9926e2b8bef7cc839192dfbe93212e",
+        "tag": "5.3.70.1"
+    }
+}
