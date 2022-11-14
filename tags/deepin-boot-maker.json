@@ -1,0 +1,13 @@
+{
+    "apiVersion": "1.0",
+    "repo": "deepin-boot-maker",
+    "data": {
+        "tagger": {
+            "name": "郭纳福",
+            "email": "guonafu@uniontech.com"
+        },
+        "message": "中铁信科定制项目交付：帮助手册修改",
+        "object": "d8ad13d737af35cc3c7ac699ba08a4da5dcbb8b5",
+        "tag": "5.7.8.1"
+    }
+}
