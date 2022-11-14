@@ -3,11 +3,11 @@
     "repo": "dtkwidget",
     "data": {
         "tagger": {
-            "name": "陈可",
+            "name": "chenke",
             "email": "chenke@uniontech.com"
         },
-        "message": "realse tag on master",
-        "object": "c41fdded544c265bfda3f5bfe50ebc685c84c56a",
-        "tag": "5.6.1"
+        "message": "0819提测",
+        "object": "ee9a7ffaa769d580a207c8dcd2de649851c3a79a",
+        "tag": "5.5.58"
     }
 }
