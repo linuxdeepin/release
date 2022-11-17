@@ -3,11 +3,11 @@
     "repo": "lastore-daemon",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "张敬芳",
+            "email": "zhangjingfang@uniontech.com"
         },
-        "message": "1013社区提测",
-        "object": "de720f38e8b81e054272778f55f0a75ee3f5afaa",
-        "tag": "5.3.38"
+        "message": "1054 bug提测",
+        "object": "493809438340aa93f8a375acb701ffd107650077",
+        "tag": "5.3.39"
     }
 }
