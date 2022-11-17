@@ -3,11 +3,11 @@
     "repo": "dde-dock",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "张敬芳",
+            "email": "zhangjingfang@uniontech.com"
         },
-        "message": "1025提测",
-        "object": "968140e6e2b3101942f2f706c215ae38336538fd",
-        "tag": "5.5.74"
+        "message": "1050 U4 bug修复",
+        "object": "9acd608ed47420f9cf68e2bb21193ba383735009",
+        "tag": "5.5.76"
     }
 }
