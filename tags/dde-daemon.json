@@ -3,11 +3,11 @@
     "repo": "dde-daemon",
     "data": {
         "tagger": {
-            "name": "殷杰",
-            "email": "yinjie@uniontech.com"
+            "name": "张敬芳",
+            "email": "zhangjingfang@uniontech.com"
         },
-        "message": "修复单元测试失败",
-        "object": "51a81134307d0134bfc0ee6092b32c207591ddea",
-        "tag": "5.14.120"
+        "message": "DDE 1054bug修复",
+        "object": "309026f8c125e85ce0939ab55eb9000014537be6",
+        "tag": "5.14.121"
     }
 }
