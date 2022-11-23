@@ -3,11 +3,11 @@
     "repo": "dde-network-core",
     "data": {
         "tagger": {
-            "name": "张敬芳",
-            "email": "zhangjingfang@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "DDE 1054提测",
-        "object": "37ba426e96ac7efd674cb6568615aab2ccb2848d",
-        "tag": "1.0.73"
+        "message": "社区提测",
+        "object": "723d0681ff99a9e7dfe88ccb3bdab52a17b53d81",
+        "tag": "1.1.2"
     }
 }
