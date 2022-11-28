@@ -6,8 +6,8 @@
             "name": "张敬芳",
             "email": "zhangjingfang@uniontech.com"
         },
-        "message": "DDE 1054bug修复",
-        "object": "309026f8c125e85ce0939ab55eb9000014537be6",
-        "tag": "5.14.121"
+        "message": "1054提测",
+        "object": "8170c46a7468193f182941b6957e8a55d7908bcb",
+        "tag": "5.14.122"
     }
 }
