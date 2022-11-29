@@ -3,11 +3,11 @@
     "repo": "go-dbus-factory",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "张敬芳",
+            "email": "zhangjingfang@uniontech.com"
         },
-        "message": "0902提测",
-        "object": "e684ef7dce66f7ad01f67c9bc8f2d5f16b292639",
-        "tag": "1.10.23"
+        "message": "1060需求提测",
+        "object": "3d8a29f3018aaee1a5fc6e52748644c1dc910c92",
+        "tag": "1.11.1"
     }
 }
