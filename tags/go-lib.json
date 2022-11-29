@@ -3,11 +3,11 @@
     "repo": "go-lib",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "张敬芳",
+            "email": "zhangjingfang@uniontech.com"
         },
-        "message": "0819提测",
-        "object": "2ddf54c4b2cff200e7ad3cb7709ff374344da606",
-        "tag": "5.8.25"
+        "message": "1060需求提测",
+        "object": "ae4320a1b55c3db1f7a933f547bbdf69f0659794",
+        "tag": "5.9.1"
     }
 }
