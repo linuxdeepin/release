@@ -3,11 +3,11 @@
     "repo": "dde-grand-search",
     "data": {
         "tagger": {
-            "name": "Zhao Hanxi",
-            "email": "zhaohanxi@uniontech.com"
+            "name": "陈李祥",
+            "email": "chenlixiang@uniontech.com"
         },
-        "message": "fix: fix the bug about match app name error",
-        "object": "be1334cb3df903d4997d68a620337797e193f6f6",
-        "tag": "5.3.1"
+        "message": "用于社区版，解决dock图标缩放",
+        "object": "8747d7bf429b5f650908e6fc75c09aa91d3e8d9b",
+        "tag": "5.4.2"
     }
 }
