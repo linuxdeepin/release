@@ -6,8 +6,8 @@
             "name": "张敬芳",
             "email": "zhangjingfang@uniontech.com"
         },
-        "message": "社区bug修复",
-        "object": "02974ef4cacf4974c8a069ccd867d019b5cfe39b",
-        "tag": "5.5.77"
+        "message": "社区提测",
+        "object": "4dc7185e7ce1321eeb035395c99f77fb9b8c264a",
+        "tag": "5.6.2"
     }
 }
