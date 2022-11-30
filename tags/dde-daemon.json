@@ -3,11 +3,11 @@
     "repo": "dde-daemon",
     "data": {
         "tagger": {
-            "name": "张敬芳",
-            "email": "zhangjingfang@uniontech.com"
+            "name": "陈彬",
+            "email": "chenbina@uniontech.com"
         },
-        "message": "1060需求提测",
-        "object": "a5f179b9a0f285666978f322f25af88e030c380d",
-        "tag": "5.15.1"
+        "message": "1053维护",
+        "object": "9fc420ede032d3adfdaabbb781bdd622793e9923",
+        "tag": "5.14.114.1"
     }
 }
