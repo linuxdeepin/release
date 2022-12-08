@@ -6,8 +6,8 @@
             "name": "陈李祥",
             "email": "chenlixiang@uniontech.com"
         },
-        "message": "专业版和社区版BugFix修改",
-        "object": "1a11790c55b33e8ed9c9ca6a419aa8c34f7f3444",
-        "tag": "5.8.2"
+        "message": "修改search图标变小",
+        "object": "0d89e6f710a6c80bd44ed5bbd5b0d4eb2b3dcefa",
+        "tag": "5.8.3"
     }
 }
