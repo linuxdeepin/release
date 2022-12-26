@@ -3,11 +3,11 @@
     "repo": "deepin-desktop-schemas",
     "data": {
         "tagger": {
-            "name": "张敬芳",
-            "email": "zhangjingfang@uniontech.com"
+            "name": "李昌泽",
+            "email": "lichangze@uniontech.com"
         },
-        "message": "1060需求提测",
-        "object": "d0a6dcc6afc752015e1b5d47b309a092f27e25f4",
-        "tag": "5.11.1"
+        "message": "1054提测",
+        "object": "868e0487351155080de230b1e5c717843002e4bf",
+        "tag": "5.10.12"
     }
 }
