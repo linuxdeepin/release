@@ -3,11 +3,11 @@
     "repo": "dde-clipboard",
     "data": {
         "tagger": {
-            "name": "李昌泽",
-            "email": "lichangze@uniontech.com"
+            "name": "张敬芳",
+            "email": "zhangjingfang@uniontech.com"
         },
-        "message": "1013社区提测",
-        "object": "ef944849979403fd048e0f574a58bfebc344f7ea",
-        "tag": "5.4.24"
+        "message": "DDE 1054提测",
+        "object": "c2c8de150f5be36791e47ac4d81494d1c1fe07e1",
+        "tag": "5.4.25"
     }
 }
